@@ -4,7 +4,7 @@ exports.mixin_common_opts = function(karma, opts) {
 	if (os === 'Darwin') {
     browsers = ['Chrome', 'ChromeCanaryExperimental', 'Firefox', 'Safari'];
 	} else if (os === 'Windows_NT') {
-    browsers = ['Chrome', 'IE'];
+    browsers = ['Chrome', 'Firefox', 'IE'];
 	} else {
     browsers = ['Chrome', 'Firefox'];
   }
@@ -45,7 +45,7 @@ exports.mixin_common_opts = function(karma, opts) {
       ChromeCanaryExperimental: {
         base: 'ChromeCanary',
         name: 'ChromeCanaryExperimental',
-        flags: ['--enable-experimental-web-platform-features']
+        flags: ['--enable-experimental-web-platform-features', '--enable-html-imports']
       },
       bs_iphone5: {
         base: 'BrowserStack',
